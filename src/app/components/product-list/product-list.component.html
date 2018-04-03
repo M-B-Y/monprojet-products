@@ -1,0 +1,18 @@
+
+<table class="table table-bordered table-stripped">
+  <thead>
+    <tr>
+      <th>Product Code</th>
+      <th>Label</th>
+      <th>Price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of data">
+      <td>{{p.code}}</td>
+      <td>{{p.label}}</td>
+      <td>{{p.priceUnit}}</td>
+    </tr>
+  </tbody>
+</table>
+
