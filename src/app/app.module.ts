@@ -12,13 +12,15 @@ import { RouterModule } from '@angular/router';
 import { Route } from '@angular/compiler/src/core';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { RoutingModule } from './routing-module/routing.module';
 
-const routes = [
-  { path: 'products', component: ProductListComponent},
-  { path: 'welcome', component: WelcomeComponent},
-  { path: '', redirectTo: 'welcome', pathMatch: 'full'},
-  { path: '**', component: NotFoundComponent},
-];
+// const routes = [
+//   { path: 'products', component: ProductListComponent},
+//   { path: 'welcome', component: WelcomeComponent},
+//   // { path: '', redirectTo: 'welcome', pathMatch: 'full'},
+//   { path: '', component: WelcomeComponent},
+//   { path: '**', component: NotFoundComponent},
+// ];
 
 @NgModule({
   declarations: [
@@ -32,7 +34,7 @@ const routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes, {useHash: false})
+    RoutingModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
